@@ -60,8 +60,12 @@ public class CalculateArea {
         // Get input from user
         Scanner keyboard = new Scanner(System.in);
         System.out.print("What is the circle's radius? ");
-        //todo
-        //radius = keyboard.nextDouble();
+        radius = keyboard.nextBigDecimal();
+
+        if (radius.compareTo(ZERO) < 0) {
+            System.out.println("Invalid input - radius could not be negative");
+            return;
+        }
 
         // Display output
         System.out.println("The circle's area is "
@@ -77,13 +81,19 @@ public class CalculateArea {
 
         // Get length
         System.out.print("Enter length? ");
-        //todo
-        //length = keyboard.nextDouble();
+        length = keyboard.nextBigDecimal();
+
+        if (length.compareTo(ZERO) < 0) {
+            System.out.println("Invalid input - length could not be negative");
+        }
 
         // Get width
         System.out.print("Enter width? ");
-        //todo
-        //width = keyboard.nextDouble();
+        width = keyboard.nextBigDecimal();
+
+        if (width.compareTo(ZERO) < 0) {
+            System.out.println("Invalid input - width could not be negative");
+        }
 
         // Display output
         System.out.println("The rectangle's area is "
@@ -99,13 +109,19 @@ public class CalculateArea {
 
         // Get the base
         System.out.print("Enter length of the triangle's base? ");
-        //todo
-        //base = keyboard.nextDouble();
+        base = keyboard.nextBigDecimal();
+
+        if (base.compareTo(ZERO) < 0) {
+            System.out.println("Invalid input - base could not be negative");
+        }
 
         // Get the height
         System.out.print("Enter triangle's height? ");
-        //todo
-        //height = keyboard.nextDouble();
+        height = keyboard.nextBigDecimal();
+
+        if (height.compareTo(ZERO) < 0) {
+            System.out.println("Invalid input - height could not be negative");
+        }
 
         // Display the triangle's area.
         System.out.println("The triangle's area is "
