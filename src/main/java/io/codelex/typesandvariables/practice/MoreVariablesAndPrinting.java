@@ -2,25 +2,30 @@ package io.codelex.typesandvariables.practice;
 
 public class MoreVariablesAndPrinting {
     public static void main(String[] args) {
-        String myName, myEyes, myTeeth, myHair;
-        int myAge, myHeight, myWeight;
 
-        myName = "Zed A. Shaw";
-        myAge = 35;
-        myHeight = 74;  // inches
-        myWeight = 180; // lbs
-        myEyes = "Blue";
-        myTeeth = "White";
-        myHair = "Brown";
+        String name = "Zed A. Shaw";
+        int age = 35;
+        int height = 74;  // inches
+        int weight = 180; // lbs
+        String eyes = "Blue";
+        String teeth = "White";
+        String hair = "Brown";
 
-        System.out.println("Let's talk about " + myName + ".");
-        System.out.println("He's " + myHeight + " inches tall.");
-        System.out.println("He's " + myWeight + " pounds heavy.");
+        double heightInCentimeters = height * 2.54;
+        double weightInKilos = weight * 0.453592;
+
+        System.out.println("Let's talk about " + name + ".");
+        System.out.println("He's " + height + " inches tall.");
+        System.out.println("He's " + weight + " pounds heavy.");
         System.out.println("Actually, that's not too heavy.");
-        System.out.println("He's got " + myEyes + " eyes and " + myHair + " hair.");
-        System.out.println("His teeth are usually " + myTeeth + " depending on the coffee.");
+        System.out.println("He's got " + eyes + " eyes and " + hair + " hair.");
+        System.out.println("His teeth are usually " + teeth + " depending on the coffee.");
 
-        System.out.println("If I add " + myAge + ", " + myHeight + ", and " + myWeight
-                + " I get " + (myAge + myHeight + myWeight) + ".");
+        System.out.println("But in metric system he is " + heightInCentimeters + " centimeters tall.");
+        System.out.printf("And he weights %.2f kilos.", weightInKilos);
+        System.out.println();
+
+        System.out.println("If I add " + age + ", " + height + ", and " + weight
+                + " I get " + (age + height + weight) + ".");
     }
 }
