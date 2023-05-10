@@ -11,35 +11,33 @@ public class TenBillion {
 
         long n = in.nextLong();
 
-        /*
-        todo - check if Long
-        if (?) {
-            //todo - check if n is less than zero
-            if (?) {
+        if (n >= Long.MIN_VALUE && n <= Long.MAX_VALUE) {
+            if (n < 0) {
                 n *= -1;
             }
-            fixme
-            if (?) {
+
+            if (n >= 10_000_000_000L) {
                 System.out.println("Number is greater or equals 10,000,000,000!");
             } else {
                 int digits = 1;
-                if (?) {
+
+                if (n < 100) {
                     digits = 2;
-                } else if (?) {
+                } else if (n < 1000) {
                     digits = 3;
-                } else if (?) {
+                } else if (n < 10_000) {
                     digits = 4;
-                } else if (?) {
+                } else if (n < 100_000) {
                     digits = 5;
-                } else if (?) {
+                } else if (n < 1_000_000) {
                     digits = 6;
-                } else if (?) {
+                } else if (n < 10_000_000) {
                     digits = 7;
-                } else if (?) {
+                } else if (n < 100_000_000) {
                     digits = 8;
-                } else if (?) {
+                } else if (n < 1_000_000_000) {
                     digits = 9;
-                } else if (?) {
+                } else {
                     digits = 10;
                 }
                 System.out.println("Number of digits in the number: " + digits);
@@ -47,7 +45,6 @@ public class TenBillion {
         } else {
             System.out.println("The number is not a long");
         }
-        */
     }
 
 }
