@@ -24,9 +24,9 @@ public class Piglet {
                 System.out.println("Roll again? (yes/no)");
 
                 String nextRoll = "";
-                while (!nextRoll.equals("yes") && !nextRoll.equals("no") && !nextRoll.equals("no") && !nextRoll.equals("n")) {
+                while (isInputValid(nextRoll)) {
                     nextRoll = input.nextLine().toLowerCase();
-                    if (!nextRoll.equals("yes") && !nextRoll.equals("no") && !nextRoll.equals("no") && !nextRoll.equals("n")) {
+                    if (isInputValid(nextRoll)) {
                         System.out.println("Invalid input. Please enter 'yes' or 'no'.");
                     }
                 }
@@ -39,5 +39,9 @@ public class Piglet {
                 }
             }
         }
+    }
+
+    private static boolean isInputValid(String nextRoll) {
+        return !nextRoll.equals("yes") && !nextRoll.equals("no") && !nextRoll.equals("no") && !nextRoll.equals("n");
     }
 }
