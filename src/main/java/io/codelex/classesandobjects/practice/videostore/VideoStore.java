@@ -10,33 +10,27 @@ public class VideoStore {
         inventory = new ArrayList<>();
     }
 
-    public void addVideo(String title) {
-        Video video = new Video(title);
-        inventory.add(video);
-    }
-
     public void checkOutVideo(String title) {
         Video video = findVideo(title);
-        if (video != null && !video.isCheckedOut()) {
-            video.checkOut();
-        }
+        video.setCheckedIn();
     }
 
     public void returnVideo(String title) {
         Video video = findVideo(title);
-        if (video != null && video.isCheckedOut()) {
-            video.returnVideo();
-        }
+        video.setCheckedOut();
     }
 
     public void receiveRating(String title, int rating) {
         Video video = findVideo(title);
-        if (video != null) {
-            video.receiveRating(rating);
-        }
+        video.addRating(rating);
     }
 
-    public void listInventory() {
+    public void addToInventory(String title, int rating) {
+        Video video2 = new Video(title, rating);
+        inventory.add(video2);
+    }
+
+    public void getInventory() {
         for (Video video : inventory) {
             System.out.println(video);
         }
