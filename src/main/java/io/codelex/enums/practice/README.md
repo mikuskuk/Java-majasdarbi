@@ -1,25 +1,25 @@
 # Enums
 
-# Exercise #1
+# Exercise #1 +
 
 Create an enum representing cardinal points - North, South, East and West
 
 Write a program which prints out the following:
 
-| Direction | Text |
-| --- | --- |
-| North | up |
-| South | down |
-| East | right |
-| West | left |
+| Direction | Text  |
+|-----------|-------|
+| North     | up    |
+| South     | down  |
+| East      | right |
+| West      | left  |
 
 There are multiple ways on how to do it:
 
- - with an if statement
- - using switch
- - having a field inside enum
- - having abstract method
- - mapping the values in EnumMap
+- with an if statement
+- using switch
+- having a field inside enum
+- having abstract method
+- mapping the values in EnumMap
 
 Print out all of the enum values and their ordinals in the following way:
 
@@ -30,7 +30,7 @@ East:right:2
 West:left:3
 ```
 
-# Exercise #2
+# Exercise #2 +
 
 Create Scissor-Paper-Stone game using an enumeration.
 
