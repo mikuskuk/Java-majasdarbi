@@ -17,12 +17,6 @@ public class Movie {
         this.rating = "PG";
     }
 
-    public static void main(String[] args) {
-        Movie casinoRoyale = new Movie("Casino Royale", "Eon Productions", "PG-13");
-        Movie glass = new Movie("Glass", "Buena Vista International", "PG-13");
-        Movie spiderMan = new Movie("Spider-Man: Into the Spider-Verse", "Columbia Pictures", "PG");
-    }
-
     public static Movie[] getPG(Movie[] movies) {
         Movie[] pgMovies = new Movie[movies.length];
         int count = 0;
