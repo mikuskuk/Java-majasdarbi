@@ -1,28 +1,31 @@
 package io.codelex.knowledgecheck.exercise2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Basket<T> {
     private static final int MAX_ITEMS = 10;
-    private int itemCount;
+    private List<T> items;
 
     public Basket() {
-        itemCount = 0;
+        items = new ArrayList<>();
     }
 
     public void addToBasket(T item) {
-        if (itemCount == MAX_ITEMS) {
+        if (items.size() == MAX_ITEMS) {
             throw new BasketFullException();
         }
-        itemCount++;
+        items.add(item);
     }
 
     public void removeFromBasket() {
-        if (itemCount == 0) {
+        if (items.isEmpty()) {
             throw new BasketEmptyException();
         }
-        itemCount--;
+        items.remove(items.size() - 1);
     }
 
     public int getItemCount() {
-        return itemCount;
+        return items.size();
     }
 }

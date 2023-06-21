@@ -1,25 +1,23 @@
 package io.codelex.knowledgecheck.exercise1;
 
+import java.math.BigDecimal;
+
 public class CreditCard extends Card {
 
-    public CreditCard(String number, String owner, String ccv, double balance) {
+    public CreditCard(String number, String owner, String ccv, BigDecimal balance) {
         super(number, owner, ccv, balance);
     }
 
     @Override
-    public void addMoney(double amount) {
-        balance += amount;
+    public void addMoney(BigDecimal amount) {
+        balance = balance.add(amount);
     }
 
     @Override
-    public void takeMoney(double amount) throws NotEnoughFundsException {
-        if (amount <= balance) {
-            balance -= amount;
-            if (balance < 100) {
-                System.out.println("Warning: Low funds");
-            }
-        } else {
-            throw new NotEnoughFundsException("Not enough funds!");
+    public void takeMoney(BigDecimal amount) throws NotEnoughFundsException {
+        super.takeMoney(amount);
+        if (balance.compareTo(BigDecimal.valueOf(100)) < 0) {
+            System.out.println("Warning: Low funds");
         }
     }
 }
